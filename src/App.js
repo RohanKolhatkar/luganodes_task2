@@ -1,23 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-import useState , {UseEffect} from 'react';
+import React , {useEffect , useState} from 'react';
 
-const url = https://api.koios.rest/api/v0/account_list
+// const url = https://jsonplaceholder.typicode.com/todos/1
+
 
 function App() {
   // return (
 
-    UseEffect(() => {
-      const fetchdata = async () = {
-        const result = await fetch(url);
-        console.log(result);
-      }
-      fetchdata();
-    })
+    // useEffect(() => {
+    //   const fetchdata = async () = {
+    //     const result = await fetch(url);
+    //     console.log(result);
+    //   }
+    //   fetchdata();
+    // })
+    const [data , setData] = useState([]);
+
+    // fetch("https://jsonplaceholder.typicode.com/todos/1").then((result) =>{
+    //     result.json().then((resp) =>{
+    //       console.warn("result" , resp)
+    //       setData(resp)
+    //     })
+    // })
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
 
     return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -30,8 +42,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <h1> Total Stake Counter for Cardano, Polkadot, and Kusama Chains</h1>
     </div>
+
 
 
   );
