@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React , {useEffect , useState} from 'react';
+import AccountList from './AccountList';
 // const url = https://jsonplaceholder.typicode.com/todos/1
 
 
@@ -51,9 +52,11 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <h1> Total Stake Counter for Cardano, Polkadot, and Kusama Chains</h1>
+      <div className=  'navbar'> 
+        <h1> Total Stake Counter for Cardano, Polkadot, and Kusama Chains</h1>
+      </div>
       <h6>Api fetch done console 
-        
+      <AccountList />
       </h6>
       <table>
         <tr>

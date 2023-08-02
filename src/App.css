@@ -1,8 +1,11 @@
 .App {
   text-align: center;
-  background-color: gray;
+  background-color: #6F61C0;
 }
-
+.navbar{
+  background: fixed;
+  background-color: #8BE8E5;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
