@@ -18,14 +18,22 @@ function App() {
     const [data , setData] = useState([]);
 
     // fetch("https://jsonplaceholder.typicode.com/todos/1").then((result) =>{
-    //     result.json().then((resp) =>{
-    //       console.warn("result" , resp)
-    //       setData(resp)
-    //     })
-    // })
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
+    // //     result.json().then((resp) =>{
+    // //       console.warn("result" , resp)
+    // //       setData(resp)
+    // //     })
+    // // })
+    // fetch('https://api.koios.rest/api/v0/account_list')
+    //   .then(response => response.json())
+    //   .then(json => console.log(json))
+
+    useEffect(()=>{
+      fetch("").then((result) =>{
+        result.json().then((resp) =>{
+          setData(resp)
+        })
+      })
+    }, [])
 
     return (
     <div className="App">
@@ -44,6 +52,7 @@ function App() {
         </a>
       </header> */}
       <h1> Total Stake Counter for Cardano, Polkadot, and Kusama Chains</h1>
+
     </div>
 
 
