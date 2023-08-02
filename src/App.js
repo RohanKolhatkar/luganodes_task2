@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import React , {useEffect , useState} from 'react';
-
 // const url = https://jsonplaceholder.typicode.com/todos/1
 
 
@@ -28,8 +27,9 @@ function App() {
     //   .then(json => console.log(json))
 
     useEffect(()=>{
-      fetch("").then((result) =>{
+      fetch("https://api.koios.rest/api/v0/account_list").then((result) =>{
         result.json().then((resp) =>{
+          console.log(resp)
           setData(resp)
         })
       })
@@ -52,6 +52,20 @@ function App() {
         </a>
       </header> */}
       <h1> Total Stake Counter for Cardano, Polkadot, and Kusama Chains</h1>
+      <h6>Api fetch done console 
+        
+      </h6>
+      <table>
+        <tr>
+          <td>id</td>
+          <td>state_count</td>
+        </tr>
+        {
+          data.map((item)=>{
+            <tr>{item.id}</tr>
+          },[])
+        }
+      </table>
 
     </div>
 
